@@ -13,11 +13,10 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
       </section>
+      <nav>
+        <Link href="/login">Login &rarr;</Link>
+      </nav>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
@@ -36,6 +35,8 @@ export default function Home({ allPostsData }) {
   )
 }
 
+// page get data dependencies
+// in production build
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {

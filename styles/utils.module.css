@@ -1,3 +1,12 @@
+.centerBox {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -49,4 +58,10 @@
 
 .lightText {
   color: #666;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
